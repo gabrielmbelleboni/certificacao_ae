@@ -7,5 +7,6 @@ select
     addressline2 as address_line_2,
     city,
     cast(postalcode as integer) as postal_code,
+    stateprovinceid as state_province_id,
     modifieddate as modified_date
 from {{ source('adventure_works', 'address') }}

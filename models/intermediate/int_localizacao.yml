@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: int_localizacao
+    description: "Intermediate model to consolidate location data (address, state, and country)."
+    columns:
+      - name: address_id
+        description: "Unique identifier for the address."
+        tests:
+          - unique
+          - not_null
+      - name: city
+        description: "City where the customer is located."
+      - name: state_province_name
+        description: "State or province where the customer is located."
+      - name: state_province_code
+        description: "State or province code where the customer is located."
+      - name: country_region_name
+        description: "Country or region name where the customer is located."
+      - name: country_region_code
+        description: "Country or region code where the customer is located."
