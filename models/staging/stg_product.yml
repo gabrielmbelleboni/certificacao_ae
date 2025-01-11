@@ -1,0 +1,85 @@
+version: 2
+
+models:
+  - name: stg_product
+    description: "Staging model for product data. Cleans and prepares raw product data for downstream consumption."
+    columns:
+      - name: product_id
+        description: "The unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        description: "The name of the product."
+        tests:
+          - not_null
+
+      - name: product_number
+        description: "The product number assigned to the product."
+
+      - name: make_flag
+        description: "Indicates whether the product is manufactured."
+
+      - name: finished_goods_flag
+        description: "Indicates whether the product is a finished good."
+
+      - name: product_color
+        description: "The color of the product."
+
+      - name: safety_stock_level
+        description: "The safety stock level for the product."
+
+      - name: reorder_point
+        description: "The reorder point for the product."
+
+      - name: standard_cost
+        description: "The standard cost of the product."
+
+      - name: list_price
+        description: "The list price of the product."
+
+      - name: product_size
+        description: "The size of the product."
+
+      - name: size_unit_measure_code
+        description: "The unit of measure code for the product size."
+
+      - name: weight_unit_measure_code
+        description: "The unit of measure code for the product weight."
+
+      - name: product_weight
+        description: "The weight of the product."
+
+      - name: days_to_manufacture
+        description: "The number of days required to manufacture the product."
+
+      - name: product_line
+        description: "The product line the product belongs to."
+
+      - name: product_class
+        description: "The class of the product."
+
+      - name: product_style
+        description: "The style of the product."
+
+      - name: product_subcategory_id
+        description: "The unique identifier for the product's subcategory."
+
+      - name: product_model_id
+        description: "The unique identifier for the product's model."
+
+      - name: sell_start_date
+        description: "The date the product started being sold."
+
+      - name: sell_end_date
+        description: "The date the product stopped being sold (if applicable)."
+
+      - name: discontinued_date
+        description: "The date the product was discontinued (if applicable)."
+
+      - name: row_guid
+        description: "The globally unique identifier for the row."
+
+      - name: modified_date
+        description: "The date the record was last modified."

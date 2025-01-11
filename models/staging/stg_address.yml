@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_address
+    description: "Staging model for address data. Cleans and prepares raw address data for downstream consumption."
+    columns:
+      - name: address_id
+        description: "The unique identifier for the address."
+        tests:
+          - unique
+          - not_null
+
+      - name: address_line_1
+        description: "The first line of the address."
+        tests:
+          - not_null
+
+      - name: address_line_2
+        description: "The second line of the address (optional)."
+
+      - name: city
+        description: "The city where the address is located."
+        tests:
+          - not_null
+
+      - name: postal_code
+        description: "The postal code of the address."
+        tests:
+          - not_null
+
+      - name: modified_date
+        description: "The date when the address record was last modified."

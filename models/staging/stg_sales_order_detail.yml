@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_sales_order_detail
+    description: "Staging model for sales order detail data. Cleans and prepares raw sales order detail data for downstream consumption."
+    columns:
+      - name: sales_order_id
+        description: "The identifier of the sales order."
+        tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        description: "The unique identifier for the sales order detail."
+        tests:
+          - unique
+          - not_null
+
+      - name: carrier_tracking_number
+        description: "The tracking number for the shipment of the order."
+
+      - name: order_quantity
+        description: "The quantity of the product in the sales order."
+
+      - name: product_id
+        description: "The identifier of the product in the sales order."
+        tests:
+          - not_null
+
+      - name: special_offer_id
+        description: "The identifier of any special offer applied to the sales order."
+
+      - name: unit_price
+        description: "The price per unit of the product in the sales order."
+
+      - name: unit_price_discount
+        description: "The discount applied to the unit price of the product in the sales order."
+
+      - name: row_guid
+        description: "The globally unique identifier for the row."
+
+      - name: modified_date
+        description: "The date the record was last modified."

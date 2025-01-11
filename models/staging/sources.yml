@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    database: FEA24_9  
+    schema: RAW_ADVENTURE_WORKS  
+    tables:
+      - name: person
+      - name: salesreason
+      - name: stateprovince
+      - name: address
+      - name: countryregion
+      - name: salesorderheader
+      - name: salesorderdetail
+      - name: product

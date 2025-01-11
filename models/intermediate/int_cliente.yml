@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: int_cliente
+    description: "Intermediate model to consolidate customer and location data."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "Customer's first name."
+      - name: middle_name
+        description: "Customer's middle name."
+      - name: last_name
+        description: "Customer's last name."
+      - name: person_type
+        description: "Type of person (e.g., Individual or Company)."
+      - name: name_style
+        description: "Name style (e.g., title or no title)."
+      - name: address_id
+        description: "Customer's address identifier."
+      - name: city
+        description: "City where the customer is located."
+      - name: state_province_name
+        description: "State or province where the customer is located."
+      - name: state_province_code
+        description: "State or province code where the customer is located."
+      - name: country_region_name
+        description: "Country or region name where the customer is located."
+      - name: country_region_code
+        description: "Country or region code where the customer is located."
+      - name: person_modified_date
+        description: "Date when the customer's data was last modified."

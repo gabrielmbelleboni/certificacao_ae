@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_state_province
+    description: "Staging model for state and province data. Cleans and prepares raw state and province data for downstream consumption."
+    columns:
+      - name: state_province_id
+        description: "The unique identifier for the state or province."
+        tests:
+          - unique
+          - not_null
+
+      - name: state_province_code
+        description: "The code representing the state or province."
+
+      - name: country_region_code
+        description: "The code representing the country or region."
+        tests:
+          - not_null
+
+      - name: is_only_state_province_flag
+        description: "Flag indicating if it's the only state or province."
+
+      - name: state_province_name
+        description: "The name of the state or province."
+        tests:
+          - not_null
+
+      - name: territory_id
+        description: "The unique identifier for the territory associated with the state or province."
+
+      - name: row_guid
+        description: "The globally unique identifier for the row."
+
+      - name: modified_date
+        description: "The date the record was last modified."

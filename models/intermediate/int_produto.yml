@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: int_produto
+    description: "Intermediate model to consolidate product data."
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "Name of the product."
+      - name: product_number
+        description: "Product number."
+      - name: make_flag
+        description: "Flag indicating if the product is manufactured."
+      - name: finished_goods_flag
+        description: "Flag indicating if the product is finished goods."
+      - name: product_color
+        description: "Color of the product."
+      - name: standard_cost
+        description: "Standard cost of the product."
+      - name: list_price
+        description: "List price of the product."
+      - name: product_size
+        description: "Size of the product."
+      - name: product_weight
+        description: "Weight of the product."
+      - name: product_line
+        description: "Product line."
+      - name: product_class
+        description: "Product class."
+      - name: product_style
+        description: "Product style."
+      - name: product_subcategory_id
+        description: "Product subcategory identifier."
+      - name: product_model_id
+        description: "Product model identifier."
+      - name: sell_start_date
+        description: "Product's sell start date."
+      - name: sell_end_date
+        description: "Product's sell end date."
+      - name: discontinued_date
+        description: "Product's discontinued date."
