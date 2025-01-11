@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_state_province
+    description: Staging model for state and province data
+    columns:
+      - name: state_province_id
+        description: The identifier of the state or province
+        tests:
+          - unique
+          - not_null
+      - name: state_province_code
+        description: The code for the state or province
+      - name: country_region_code
+        description: The code for the country or region
+      - name: is_only_state_province
+        description: Flag indicating if it's the only state or province
+      - name: state_province_name
+        description: The name of the state or province
+      - name: territory_id
+        description: The identifier of the territory
+      - name: row_guid
+        description: The globally unique identifier for the row
+      - name: modified_date
+        description: The date the record was last modified

@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_person
+    description: Staging model for people
+    columns:
+
+      - name: business_entity_id
+        description: The identifier of the business entity
+        tests:
+          - unique
+          - not_null

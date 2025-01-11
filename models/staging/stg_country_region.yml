@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_country_region
+    description: Staging model for country and region data
+    columns:
+      - name: country_region_code
+        description: The code for the country or region
+        tests:
+          - unique
+          - not_null
+      - name: country_region_name
+        description: The name of the country or region
+      - name: modified_date
+        description: The date the record was last modified

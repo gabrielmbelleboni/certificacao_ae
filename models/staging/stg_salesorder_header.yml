@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_salesorder_header
+    description: Staging model for sales order header data
+    columns:
+      - name: sales_order_id
+        description: The identifier of the sales order
+        tests:
+          - unique
+          - not_null
+      - name: revision_number
+        description: The revision number of the sales order
+      - name: order_date
+        description: The date the order was placed
+      - name: due_date
+        description: The due date for the order
+      - name: ship_date
+        description: The date the order was shipped
+      - name: order_status
+        description: The status of the order
+      - name: online_order_flag
+        description: Flag indicating if the order was placed online
+      - name: purchase_order_number
+        description: The purchase order number associated with the order
+      - name: account_number
+        description: The account number for the order
+      - name: customer_id
+        description: The identifier of the customer
+      - name: sales_person_id
+        description: The identifier of the salesperson
+      - name: territory_id
+        description: The identifier of the sales territory
+      - name: bill_to_address_id
+        description: The address ID for billing
+      - name: ship_to_address_id
+        description: The address ID for shipping
+      - name: ship_method_id
+        description: The method used for shipping
+      - name: credit_card_id
+        description: The identifier of the credit card used
+      - name: credit_card_approval_code
+        description: The approval code for the credit card transaction
+      - name: currency_rate_id
+        description: The identifier for the currency rate used in the transaction
+      - name: subtotal
+        description: The subtotal amount of the order
+      - name: tax_amount
+        description: The tax amount applied to the order
+      - name: freight
+        description: The freight cost for the order
+      - name: total_due
+        description: The total amount due for the order
+      - name: comment
+        description: Any comments associated with the order
+      - name: row_guid
+        description: The globally unique identifier for the row
+      - name: modified_date
+        description: The date the record was last modified
