@@ -2,14 +2,18 @@ version: 2
 
 models:
   - name: stg_country_region
-    description: Staging model for country and region data
+    description: "Staging model for country and region data. Cleans and prepares raw country and region data for downstream consumption."
     columns:
       - name: country_region_code
-        description: The code for the country or region
+        description: "The unique code identifying the country or region."
         tests:
           - unique
           - not_null
+
       - name: country_region_name
-        description: The name of the country or region
+        description: "The name of the country or region."
+        tests:
+          - not_null
+
       - name: modified_date
-        description: The date the record was last modified
+        description: "The date when the country or region record was last modified."

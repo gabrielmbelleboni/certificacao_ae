@@ -2,16 +2,21 @@ version: 2
 
 models:
   - name: stg_sales_reason
-    description: Staging model for sales reasons
+    description: "Staging model for sales reasons data. Cleans and prepares raw sales reasons data for downstream consumption."
     columns:
       - name: sales_reason_id
-        description: The identifier of the sales reason
+        description: "The unique identifier for the sales reason."
         tests:
           - unique
           - not_null
+
       - name: sales_reason_name
-        description: The name of the sales reason
+        description: "The name of the sales reason."
+        tests:
+          - not_null
+
       - name: reason_type
-        description: The type of the sales reason
+        description: "The type or category of the sales reason."
+
       - name: modified_date
-        description: The date the sales reason was last modified
+        description: "The date the record was last modified."

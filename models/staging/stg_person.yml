@@ -2,11 +2,50 @@ version: 2
 
 models:
   - name: stg_person
-    description: Staging model for people
+    description: "Staging model for person data. Cleans and prepares raw person data for downstream consumption."
     columns:
-
       - name: business_entity_id
-        description: The identifier of the business entity
+        description: "The unique identifier for the business entity."
         tests:
           - unique
           - not_null
+
+      - name: person_type
+        description: "The type of person (e.g., employee, customer, vendor)."
+
+      - name: name_style
+        description: "Indicates the name style (eastern or western)."
+
+      - name: person_title
+        description: "The title of the person (e.g., Mr., Ms., Dr.)."
+
+      - name: first_name
+        description: "The first name of the person."
+        tests:
+          - not_null
+
+      - name: middle_name
+        description: "The middle name of the person (optional)."
+
+      - name: last_name
+        description: "The last name of the person."
+        tests:
+          - not_null
+
+      - name: suffix
+        description: "The suffix for the person (e.g., Jr., Sr.)."
+
+      - name: email_promotion
+        description: "Indicates whether the person is subscribed to email promotions."
+
+      - name: additional_contact_info
+        description: "Additional contact information for the person."
+
+      - name: demographics
+        description: "Demographics details for the person."
+
+      - name: row_guid
+        description: "The globally unique identifier for the row."
+
+      - name: modified_date
+        description: "The date the record was last modified."

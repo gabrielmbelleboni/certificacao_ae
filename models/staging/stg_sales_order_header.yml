@@ -1,0 +1,85 @@
+version: 2
+
+models:
+  - name: stg_sales_order_header
+    description: "Staging model for sales order header data. Cleans and prepares raw sales order header data for downstream consumption."
+    columns:
+      - name: sales_order_id
+        description: "The unique identifier for the sales order."
+        tests:
+          - unique
+          - not_null
+
+      - name: revision_number
+        description: "The revision number of the sales order."
+
+      - name: order_date
+        description: "The date the order was placed."
+        tests:
+          - not_null
+
+      - name: due_date
+        description: "The due date for the sales order."
+
+      - name: ship_date
+        description: "The date the sales order was shipped."
+
+      - name: order_status
+        description: "The status of the sales order."
+
+      - name: online_order_flag
+        description: "Flag indicating if the order was placed online."
+
+      - name: purchase_order_number
+        description: "The purchase order number associated with the sales order."
+
+      - name: account_number
+        description: "The account number related to the sales order."
+
+      - name: customer_id
+        description: "The unique identifier of the customer who placed the sales order."
+
+      - name: sales_person_id
+        description: "The unique identifier of the salesperson assigned to the sales order."
+
+      - name: territory_id
+        description: "The unique identifier for the sales territory."
+
+      - name: bill_to_address_id
+        description: "The unique identifier for the billing address of the sales order."
+
+      - name: ship_to_address_id
+        description: "The unique identifier for the shipping address of the sales order."
+
+      - name: ship_method_id
+        description: "The unique identifier for the shipping method used for the sales order."
+
+      - name: credit_card_id
+        description: "The unique identifier for the credit card used in the sales order."
+
+      - name: credit_card_approval_code
+        description: "The approval code for the credit card transaction in the sales order."
+
+      - name: currency_rate_id
+        description: "The unique identifier for the currency exchange rate applied to the sales order."
+
+      - name: subtotal
+        description: "The subtotal amount of the sales order."
+
+      - name: tax_amount
+        description: "The tax amount applied to the sales order."
+
+      - name: freight
+        description: "The freight cost for the sales order."
+
+      - name: total_due
+        description: "The total amount due for the sales order."
+
+      - name: comment
+        description: "Any comments associated with the sales order."
+
+      - name: row_guid
+        description: "The globally unique identifier for the row."
+
+      - name: modified_date
+        description: "The date the record was last modified."
